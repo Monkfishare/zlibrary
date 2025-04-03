@@ -1,0 +1,31 @@
+name: Z-Library Links Scraper
+
+on:
+  schedule:
+    # Run once a week on Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 pandas
+          
+      - name: Run Z-Library links scraper
+        run: python zlibrary_scraper.py
+        
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add output/ README.md
+          git commit -m "Update Z-Library links - $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push
