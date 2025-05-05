@@ -24,7 +24,7 @@ def scrape_zlibrary_links(url="https://zlibrary.st/new-z-library-official-websit
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.content, 'html.parser')
-    one_month_ago = datetime.now().replace(month=datetime.now().month-1)
+    one_month_ago = datetime.now().replace(month=datetime.now().month-3)
     links = []
     dates = []
     for li in soup.find('div', class_='entry-content').find_all('li'):
