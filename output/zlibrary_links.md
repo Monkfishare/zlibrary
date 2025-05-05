@@ -6,7 +6,6 @@
 |------|--------|-------------|
 | [https://z-library.sk](https://z-library.sk) | ✅ Working | April 2025 |
 | [https://z-lib.fm](https://z-lib.fm) | ✅ Working | April 2025 |
-| [https://singlelogin.re/](https://singlelogin.re/) | ✅ Working | March 2025 |
 | [https://1lib.sk/](https://1lib.sk/) | ✅ Working | April  2025 |
 | [https://es.1lib.sk/](https://es.1lib.sk/) | ✅ Working | April  2025 |
 | [https://it.1lib.sk/](https://it.1lib.sk/) | ✅ Working | April  2025 |
