@@ -5,6 +5,6 @@
 3. https://1lib.sk/
 
 ---
-**Last Updated:** 2025-07-28 02:05:48 UTC  
+**Last Updated:** 2025-08-04 02:09:49 UTC  
 **Source:** [zlibrary.st](https://zlibrary.st/new-z-library-official-website-links)
 
