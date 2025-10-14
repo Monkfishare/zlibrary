@@ -1,8 +1,10 @@
 # Z-Library Working Links
 
-No working links found at this time.
+1. https://z-library.sk
+2. https://z-lib.fm
+3. https://1lib.sk/
 
 ---
-**Last Updated:** 2025-10-13 01:46:40 UTC  
+**Last Updated:** 2025-10-14 13:40:38 UTC  
 **Source:** [zlibrary.st](https://zlibrary.st/new-z-library-official-website-links)
 
