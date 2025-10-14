@@ -4,6 +4,7 @@ import re
 import json
 from datetime import datetime
 from urllib.parse import urljoin, urlparse
+import os
 
 def fetch_working_zlib_links(url="https://zlibrary.st/new-z-library-official-website-links"):
     try:
@@ -38,6 +39,7 @@ def fetch_working_zlib_links(url="https://zlibrary.st/new-z-library-official-web
                     for link in links:
                         href = link.get('href')
                         if href and href.startswith('http'):
+                            href = href.rstrip('/')
                             working_links.append({
                                 'url': href,
                                 'description': item.get_text().strip()
@@ -46,6 +48,7 @@ def fetch_working_zlib_links(url="https://zlibrary.st/new-z-library-official-web
                     urls_in_text = re.findall(url_pattern, text)
                     for url_match in urls_in_text:
                         clean_url = re.sub(r'[^\w\-\./:]+$', '', url_match)
+                        clean_url = clean_url.rstrip('/')
                         if clean_url not in [link['url'] for link in working_links]:
                             working_links.append({
                                 'url': clean_url,
@@ -86,17 +89,20 @@ def save_links_to_json(links, filename="working_zlib_links.json"):
         print(f"Error saving to JSON: {e}")
 
 def save_readme(links, filename="README.md"):
+    if not links:
+        print(f"Skipping README.md update - no links found")
+        if os.path.exists(filename):
+            print(f"Keeping existing {filename} file")
+        return
+    
     try:
         current_date = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
         source_url = "https://zlibrary.st/new-z-library-official-website-links"
         readme_content = f"""# Z-Library Working Links
 
 """
-        if links:
-            for i, link in enumerate(links, 1):
-                readme_content += f"{i}. {link['url']}\n"
-        else:
-            readme_content += "No working links found at this time.\n"
+        for i, link in enumerate(links, 1):
+            readme_content += f"{i}. {link['url']}\n"
         
         readme_content += f"""
 ---
@@ -113,7 +119,7 @@ def save_readme(links, filename="README.md"):
 
 def display_links(links):
     if not links:
-        print("No working links found.")
+        print("No working links found at this time.")
         return
     print(f"Found {len(links)} working Z-Library links:\n")
     print("-" * 70)
@@ -127,11 +133,13 @@ if __name__ == "__main__":
     print("=" * 50)
     working_links = fetch_working_zlib_links()
     display_links(working_links)
-    save_links_to_json(working_links)
-    save_readme(working_links)
+    
     if working_links:
+        save_links_to_json(working_links)
+        save_readme(working_links)
         print("\nClean URL list:")
         for link in working_links:
             print(link['url'])
-    
-    print(f"\nProcess completed. Generated {len(working_links)} working links.")
+        print(f"\nProcess completed. Generated {len(working_links)} working links.")
+    else:
+        print("\nProcess completed. No links to save.")
