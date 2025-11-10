@@ -1,19 +1,23 @@
 {
-  "generated_date": "2025-11-03 01:50:32 UTC",
+  "generated_date": "2025-11-10 01:51:51 UTC",
   "source": "https://zlibrary.st/new-z-library-official-website-links",
-  "total_links": 3,
+  "total_links": 4,
   "links": [
     {
       "url": "https://z-library.sk",
-      "description": "https://z-library.sk (Working April 2025)"
+      "description": "https://z-library.sk (Working November 2025)"
     },
     {
       "url": "https://z-lib.fm",
-      "description": "https://z-lib.fm (Working April 2025)"
+      "description": "https://z-lib.fm (Working November 2025)"
     },
     {
       "url": "https://1lib.sk",
-      "description": "https://1lib.sk/ (Working April  2025) – Login and Search."
+      "description": "https://1lib.sk (Working November 2025) – Login and Search."
+    },
+    {
+      "url": "https://z-library.ec",
+      "description": "https://z-library.ec (Working November 2025)"
     }
   ]
 }
