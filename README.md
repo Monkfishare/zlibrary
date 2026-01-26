@@ -6,6 +6,6 @@
 4. https://z-library.ec
 
 ---
-**Last Updated:** 2026-01-19 02:04:20 UTC  
+**Last Updated:** 2026-01-26 02:09:06 UTC  
 **Source:** [zlibrary.st](https://zlibrary.st/new-z-library-official-website-links)
 
