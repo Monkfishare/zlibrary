@@ -32,7 +32,8 @@ def fetch_working_zlib_links(url="https://zlibrary.st/new-z-library-official-web
                 list_items = current_element.find_all('li')
                 for item in list_items:
                     text = item.get_text().lower()
-                    exclusion_words = ['no ', 'not ', 'ano', 'direct', 'avoid', 'spam']
+                    exclusion_words = ['no longer', 'info page', 'ano', 'direct', 'avoid', 'spam']
+                    # exclusion_words = ['no ', 'not ', 'ano', 'direct', 'avoid', 'spam']
                     if any(word in text for word in exclusion_words):
                         continue
                     links = item.find_all('a')
