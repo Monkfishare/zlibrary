@@ -1,8 +1,15 @@
 {
-  "generated_date": "2026-03-09 02:30:18 UTC",
-  "source": "https://zlibrary.st/new-z-library-official-website-links",
-  "total_links": 4,
+  "generated_date": "2026-03-18 04:20:30 UTC",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Z-Library",
+    "https://zlibrary.st/new-z-library-official-website-links"
+  ],
+  "total_links": 5,
   "links": [
+    {
+      "url": "https://z-lib.sk",
+      "description": "Wikipedia infobox first URL"
+    },
     {
       "url": "https://z-library.sk",
       "description": "https://z-library.sk (Not Working February 2026)"
