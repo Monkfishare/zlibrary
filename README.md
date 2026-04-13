@@ -14,5 +14,5 @@
 4. https://z-library.ec
 
 ---
-**Last Updated:** 2026-04-06 02:49:00 UTC  
+**Last Updated:** 2026-04-13 03:18:40 UTC  
 **Sources:** [Wikipedia](https://en.wikipedia.org/wiki/Z-Library) | [zlibrary.st](https://zlibrary.st/new-z-library-official-website-links)
